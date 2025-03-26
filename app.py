@@ -20,3 +20,7 @@ def mp_proxy():
     except Exception as e:
         print("Erro:", e)
         return {"error": str(e)}, 500
+
+@app.route("/ping")
+def ping():
+    return "pong", 200
