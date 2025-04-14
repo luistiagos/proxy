@@ -8,8 +8,7 @@ def mp_proxy():
     try:
         print("Notificação recebida:", request.json)
         # Reenvia para o seu endpoint no PythonAnywhere
-        response = requests.post(
-            "http://digitalstoregames.pythonanywhere.com/notificacao",
+        response = requests.post("http://digitalstoregames.pythonanywhere.com/notification",
             json=request.json,
             timeout=5
         )
