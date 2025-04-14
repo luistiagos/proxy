@@ -10,7 +10,7 @@ def mp_proxy():
 
         # Reenvia para o seu endpoint no PythonAnywhere
         response = requests.post(
-            "http://digitalstoregames.pythonanywhere.com/notificacao-teste",
+            "http://digitalstoregames.pythonanywhere.com/notification",
             json=request.json,
             timeout=5
         )
