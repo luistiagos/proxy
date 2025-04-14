@@ -7,14 +7,12 @@ app = Flask(__name__)
 def mp_proxy():
     try:
         print("Notificação recebida:", request.json)
-
         # Reenvia para o seu endpoint no PythonAnywhere
         response = requests.post(
-            "http://digitalstoregames.pythonanywhere.com/notificacao-teste",
+            "http://digitalstoregames.pythonanywhere.com/notificacao",
             json=request.json,
             timeout=5
         )
-
         print("Resposta do seu servidor:", response.status_code)
         return {"status": "forwarded"}, 200
     except Exception as e:
